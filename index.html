@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>疯狂星期四阵营测试</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="title-badge">
+            <i class="fa-solid fa-drumstick-bite"></i>
+        </div>
+        <h1>疯狂星期四阵营大拷问</h1>
+        
+        <!-- 答题进度条 -->
+        <div class="progress-container">
+            <div id="progress-bar" class="progress-bar"></div>
+            <div id="progress-text" class="progress-text">进度: 0/16</div>
+        </div>
+        
+        <div id="quiz-container">
+            <!-- 题目会动态生成 -->
+        </div>
+
+        <div id="result-container" class="hidden">
+            <h2>测试完成！</h2>
+            <p>你的阵营是...</p>
+            <h3 id="faction-title" class="faction-badge"></h3>
+            <p id="faction-desc" class="faction-desc"></p>
+            <p>请输入你的大名，生成专属证书：</p>
+            <input type="text" id="user-name" placeholder="在这里输入你的名字">
+            <button id="generate-cert-btn">生成我的疯狂证书</button>
+            <div id="cert-output">
+                <p id="download-tip" class="hidden">证书已生成，点击下方按钮保存！</p>
+                <button id="save-cert-btn" class="hidden">保存证书图片</button>
+            </div>
+        </div>
+
+        <!-- 证书画布 -->
+        <canvas id="cert-canvas" width="800" height="600" style="display: none;"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+    
